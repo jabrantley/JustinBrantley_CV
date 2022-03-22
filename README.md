@@ -8,4 +8,11 @@ Some important things to note:
 - The individual sections within the CV are in individual `.tex` files in the `/sections` folder. I did it this way so that I can easily change the order or content of the CV.
 - There is a boolean, `\newif\iftwopage`, that allows me to toggle between a two page resume and a full CV be setting  `\twopagetrue` or `\twopagefalse`. 
 
-I've included a copy of my 2-page resume/CV and full CV for reference.  
+I've included a copy of my 2-page resume/CV and full CV for reference, but here is a preview of the full CV
+
+[](https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/fullcv_preview.png)
+
+And here is the 2-page resume:
+
+[](https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/resume_preview.png)
+
