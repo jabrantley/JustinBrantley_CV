@@ -10,9 +10,12 @@ Some important things to note:
 
 I've included a copy of my 2-page resume/CV and full CV for reference, but here is a preview of the full CV
 
-<img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/fullcv_preview.png" width=300 />
-
+<p align="left">
+   <img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/fullcv_preview.png" width=500 />
+<p> 
+  
 And here is the 2-page resume:
 
-<img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/resume_preview.png" width=300 />
-
+<p align="left">
+  <img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/resume_preview.png" width=500 />
+<p>
