@@ -96,15 +96,16 @@
 \newif\iftwopage
 
 %% sample.bib contains your publications
-% \addbibresource{refs_fullcv.bib}
-\addbibresource{refs_twopageresume.bib}
+\addbibresource{bibs/refs_fullcv.bib}
+% \addbibresource{refs_twopageresume.bib}
 \usepackage{changepage}
 \usepackage{pifont}
 
 \begin{document}
 
 % This is for switching between the full cv and two pager. The two pager is compiled when \twopagetrue. Don't forget to change the bib file above for a shorter list and clear the cached files so it will properly update!
-\twopagetrue % \twopagefalse
+% \twopagetrue % 
+\twopagefalse
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
@@ -117,7 +118,7 @@
  
 \name{Justin A. Brantley}%, Ph.D.
 %\tagline{Your Position or Tagline Here}
-\photo{2.8cm}{Brantley-Photo.jpeg}
+\photo{2.8cm}{images/Brantley-Photo.jpeg}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
@@ -157,26 +158,26 @@
     % --- Expertise --- %
     %\smallskip
     \cvsection{Expertise}
-    \input{cvtags}
+    \input{sections/cvtags}
     
     % --- Qualifications --- %
     % \smallskip
-    \input{summaryofqualifications}
+    \input{sections/summaryofqualifications}
     
     % --- Research Experience --- %
     % \smallskip
     \cvsection{Research Experience}
-    \input{research_experience_with_projects}
+    \input{sections/research_experience_with_projects}
     
     % --- Education --- %
     % \smallskip
     \cvsection{Education}
-    \input{education_concise}
+    \input{sections/education_concise}
 
      % --- Skills --- %
     % \smallskip
     \cvsection{Technical Skills}
-    \input{skills}
+    \input{sections/skills}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                              %
@@ -187,63 +188,62 @@
 
     % --- Research Interests/Expertise --- %
     \cvsection{Research Interests}
-    \input{cvtags}
+    \input{sections/cvtags}
     
     % --- Education --- %
     \medskip
     \cvsection{Education}
-    \input{education_fullcv}
+    \input{sections/education_fullcv}
     
     % --- Research Experience --- %
     \medskip
     \cvsection{Research Experience}
-    \input{research_experience_fullCV}
+    \input{sections/research_experience_fullCV}
     
     % --- Fellowships & Awards --- %
     \medskip
     \cvsection{Fellowships \& Awards}
-    \input{fellowships_and_awards}
+    \input{sections/fellowships_and_awards}
     
     % --- Publications --- %
     \medskip
     \cvsection{Publications}
-    \input{publications}
+    \input{sections/publications}
     
     % --- Presentations --- %
     \medskip
     \cvsection{Invited Presentations}
-    \input{invited_presentations}
+    \input{sections/invited_presentations}
     
     % --- Professional Affiliations --- %
     \medskip
     \cvsection{Professional Affiliations}
-    \input{professional_affiliations}
+    \input{sections/professional_affiliations}
     
     % --- Professional Service --- %
     \medskip
     \cvsection{Professional Service}
-    \usepackage{inputenc}\medskip
-    \input{professional_service}
+    \input{sections/professional_service}
     
     % --- Mentorship --- %
     \medskip
     \cvsection{Mentorship}
-    \input{mentorship}
+    \input{sections/mentorship}
     
     % --- Skills --- %
     \medskip
     \cvsection{Technical Skills}
-    \input{skills}
+    \input{sections/skills}
     
     % --- Media Coverage --- %
     \medskip
     \cvsection{Media Coverage}
-    \input{media_coverage}
+    \input{sections/media_coverage}
     
     % --- Outreach \& Service
     \medskip
     \cvsection{Outreach \& Service}
-    \input{outreach _and_service}
+    \input{sections/outreach_and_service}
 \fi
 
 \end{document}
