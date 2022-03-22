@@ -10,9 +10,9 @@ Some important things to note:
 
 I've included a copy of my 2-page resume/CV and full CV for reference, but here is a preview of the full CV
 
-[](https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/fullcv_preview.png)
+<img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/fullcv_preview.png" width=300 />
 
 And here is the 2-page resume:
 
-[](https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/resume_preview.png)
+<img src="https://github.com/jabrantley/JustinBrantley_CV/blob/main/images/resume_preview.png" width=300 />
 
