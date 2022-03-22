@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt,a4paper,ragged2e,academicons]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+%\geometry{left=1.5cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+% JB EDIT: Change to full width. If using above, make cv header fullwidth below
+\geometry{left=.75in,right=.75in,top=.5in,bottom=.5in}
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  %\setmainfont{Graph}
+  \usepackage[T1]{fontenc}
+%   \usepackage[default]{lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+%   \usepackage[default]{lato}
+\fi
+
+\newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
+\fontdir
+
+\fontspec[Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic
+]{Roboto}
+
+\setmainfont{Roboto} 
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{heading}{Sepia}
+\colorlet{heading}{black} % JB EDIT
+% \colorlet{accent}{Mulberry}
+\colorlet{accent}{black} % JB EDIT
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\colorlet{skills}{Cerulean}
+\definecolor{Blue}{rgb}{0,0.4471,0.6980}
+\definecolor{bluegreen}{rgb}{0,0.6196,0.4510}
+\definecolor{reddishpurple}{rgb}{0.8000,0.4745,0.6549}
+\colorlet{blue}{Blue}
+\colorlet{bgreen}{bluegreen}
+\colorlet{pink}{reddishpurple}
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+
+% JB EDIT: add hyperref
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=Mulberry,
+            anchorcolor=darkblue,citecolor=darkblue}
+            
+\newcommand{\linkicon}{\normalsize\hspace{3pt}\faExternalLink}
+
+\newif\iftwopage
+
+%% sample.bib contains your publications
+% \addbibresource{refs_fullcv.bib}
+\addbibresource{refs_twopageresume.bib}
+\usepackage{changepage}
+\usepackage{pifont}
+
+\begin{document}
+
+% This is for switching between the full cv and two pager. The two pager is compiled when \twopagetrue. Don't forget to change the bib file above for a shorter list and clear the cached files so it will properly update!
+\twopagetrue % \twopagefalse
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+ % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %                                                       %
+ %                      CV HEADER                        %
+ %                                                       %
+ % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\name{Justin A. Brantley}%, Ph.D.
+%\tagline{Your Position or Tagline Here}
+\photo{2.8cm}{Brantley-Photo.jpeg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  
+  %\mailaddress{404 Richards Building, 3700 Hamilton Walk 19104}
+  \location{University of Pennsylvania, Philadelphia, PA, USA}
+  \email{jabrantl@seas.upenn.edu}
+  \phone{505.321.3366}
+  \homepage{jabrantley.github.io}
+  \twitter{@JABrantl}
+  %\linkedin{linkedin.com/in/justin-brantley}
+%   \researchgate{researchgate.net/profile/Justin\_Brantley}
+  \github{jabrantley}
+%   \pubmed{https://www.ncbi.nlm.nih.gov/myncbi/1Dgfh5817PBQ1/bibliography/public/}
+%   \googlescholar{https://scholar.google.com/citations?hl=en&user=6Bj2LDoAAAAJ}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+%\begin{fullwidth}
+%\makecvheader
+%\end{fullwidth}
+\makecvheader % JB EDIT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              %
+%      Industry Resume         %
+%                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iftwopage
+    
+    % CV and Publications
+    \vspace{-10pt}
+    \cvtag{\color{emphasis} Detailed CV:  \href{https://jabrantley.github.io/files/JustinBrantley_CV.pdf}{\hspace{1mm}\large\faFileTextO}} \cvtag{Full list of publications: \hspace{1mm} \href{https://www.ncbi.nlm.nih.gov/myncbi/1Dgfh5817PBQ1/bibliography/public/}{\large\aiPubMed} \hspace{2mm} \href{https://scholar.google.com/citations?hl=en&user=6Bj2LDoAAAAJ}{\large\aiGoogleScholar}}\\
+
+    % --- Expertise --- %
+    %\smallskip
+    \cvsection{Expertise}
+    \input{cvtags}
+    
+    % --- Qualifications --- %
+    % \smallskip
+    \input{summaryofqualifications}
+    
+    % --- Research Experience --- %
+    % \smallskip
+    \cvsection{Research Experience}
+    \input{research_experience_with_projects}
+    
+    % --- Education --- %
+    % \smallskip
+    \cvsection{Education}
+    \input{education_concise}
+
+     % --- Skills --- %
+    % \smallskip
+    \cvsection{Technical Skills}
+    \input{skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              %
+%           Full CV            %
+%                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\else
+
+    % --- Research Interests/Expertise --- %
+    \cvsection{Research Interests}
+    \input{cvtags}
+    
+    % --- Education --- %
+    \medskip
+    \cvsection{Education}
+    \input{education_fullcv}
+    
+    % --- Research Experience --- %
+    \medskip
+    \cvsection{Research Experience}
+    \input{research_experience_fullCV}
+    
+    % --- Fellowships & Awards --- %
+    \medskip
+    \cvsection{Fellowships \& Awards}
+    \input{fellowships_and_awards}
+    
+    % --- Publications --- %
+    \medskip
+    \cvsection{Publications}
+    \input{publications}
+    
+    % --- Presentations --- %
+    \medskip
+    \cvsection{Invited Presentations}
+    \input{invited_presentations}
+    
+    % --- Professional Affiliations --- %
+    \medskip
+    \cvsection{Professional Affiliations}
+    \input{professional_affiliations}
+    
+    % --- Professional Service --- %
+    \medskip
+    \cvsection{Professional Service}
+    \usepackage{inputenc}\medskip
+    \input{professional_service}
+    
+    % --- Mentorship --- %
+    \medskip
+    \cvsection{Mentorship}
+    \input{mentorship}
+    
+    % --- Skills --- %
+    \medskip
+    \cvsection{Technical Skills}
+    \input{skills}
+    
+    % --- Media Coverage --- %
+    \medskip
+    \cvsection{Media Coverage}
+    \input{media_coverage}
+    
+    % --- Outreach \& Service
+    \medskip
+    \cvsection{Outreach \& Service}
+    \input{outreach _and_service}
+\fi
+
+\end{document}
