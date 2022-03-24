@@ -96,16 +96,16 @@
 \newif\iftwopage
 
 %% sample.bib contains your publications
-\addbibresource{bibs/refs_fullcv.bib}
-% \addbibresource{refs_twopageresume.bib}
+% \addbibresource{bibs/refs_fullcv.bib}
+\addbibresource{refs_twopageresume.bib}
 \usepackage{changepage}
 \usepackage{pifont}
 
 \begin{document}
 
 % This is for switching between the full cv and two pager. The two pager is compiled when \twopagetrue. Don't forget to change the bib file above for a shorter list and clear the cached files so it will properly update!
-% \twopagetrue % 
-\twopagefalse
+\twopagetrue % 
+% \twopagefalse
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
