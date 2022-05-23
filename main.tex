@@ -93,19 +93,23 @@
             
 \newcommand{\linkicon}{\normalsize\hspace{3pt}\faExternalLink}
 
-\newif\iftwopage
+\newif\iffullcv
+\newif\ifonepage
+\newif\ifshowreferences
 
 %% sample.bib contains your publications
-% \addbibresource{bibs/refs_fullcv.bib}
-\addbibresource{refs_twopageresume.bib}
+\addbibresource{bibs/refs_fullcv.bib}
+% \addbibresource{refs_twopageresume.bib}
 \usepackage{changepage}
 \usepackage{pifont}
 
 \begin{document}
 
 % This is for switching between the full cv and two pager. The two pager is compiled when \twopagetrue. Don't forget to change the bib file above for a shorter list and clear the cached files so it will properly update!
-\twopagetrue % 
-% \twopagefalse
+\fullcvfalse
+\onepagetrue
+\showreferencesfalse % \showreferencestrue
+
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
@@ -124,10 +128,10 @@
   % You can add your own with \printinfo{symbol}{detail}
   
   %\mailaddress{404 Richards Building, 3700 Hamilton Walk 19104}
-  \location{University of Pennsylvania, Philadelphia, PA, USA}
+  \location{University of Pennsylvania}
   \phone{505.321.3366}
-  \email{justin.alexander.brantley@gmail.com}
   \homepage{jabrantley.github.io}
+  \email{justin.alexander.brantley@gmail.com}
   \twitter{@JABrantl}
   %\linkedin{linkedin.com/in/justin-brantley}
 %   \researchgate{researchgate.net/profile/Justin\_Brantley}
@@ -149,43 +153,8 @@
 %      Industry Resume         %
 %                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iftwopage
+\iffullcv
     
-    % CV and Publications
-    \vspace{-10pt}
-    \cvtag{\color{emphasis} Detailed CV:  \href{https://jabrantley.github.io/files/JustinBrantley_CV.pdf}{\hspace{1mm}\large\faFileTextO}} \cvtag{Full list of publications: \hspace{1mm} \href{https://www.ncbi.nlm.nih.gov/myncbi/1Dgfh5817PBQ1/bibliography/public/}{\large\aiPubMed} \hspace{2mm} \href{https://scholar.google.com/citations?hl=en&user=6Bj2LDoAAAAJ}{\large\aiGoogleScholar}}\\
-
-    % --- Expertise --- %
-    %\smallskip
-    \cvsection{Expertise}
-    \input{sections/cvtags}
-    
-    % --- Qualifications --- %
-    % \smallskip
-    \input{sections/summaryofqualifications}
-    
-    % --- Research Experience --- %
-    % \smallskip
-    \cvsection{Research Experience}
-    \input{sections/research_experience_with_projects}
-    
-    % --- Education --- %
-    % \smallskip
-    \cvsection{Education}
-    \input{sections/education_concise}
-
-     % --- Skills --- %
-    % \smallskip
-    \cvsection{Technical Skills}
-    \input{sections/skills}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                              %
-%           Full CV            %
-%                              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-\else
-
     % --- Research Interests/Expertise --- %
     \cvsection{Research Interests}
     \input{sections/cvtags}
@@ -244,6 +213,18 @@
     \medskip
     \cvsection{Outreach \& Service}
     \input{sections/outreach_and_service}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              %
+%           Full CV            %
+%                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\else
+    \ifonepage
+        \input{onepageresume}
+    \else 
+        \input{twopageresume}
+    \fi 
 \fi
 
 \end{document}
