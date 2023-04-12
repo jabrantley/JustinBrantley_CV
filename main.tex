@@ -70,13 +70,28 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
-\colorlet{skills}{Cerulean}
+
+
+
 \definecolor{Blue}{rgb}{0,0.4471,0.6980}
 \definecolor{bluegreen}{rgb}{0,0.6196,0.4510}
 \definecolor{reddishpurple}{rgb}{0.8000,0.4745,0.6549}
 \colorlet{blue}{Blue}
 \colorlet{bgreen}{bluegreen}
 \colorlet{pink}{reddishpurple}
+\definecolor{philliesblue}{rgb}{0, .18, .45}
+\definecolor{redsox_red}{rgb}{0.738, 0.1875, 0.223}
+\definecolor{redsox_blue}{rgb}{0.046, 0.13671875, 0.25 }
+\colorlet{skills}{redsox_blue}%philliesblue}%Cerulean}
+\definecolor{rockies_purple}{rgb}{0.19921875, 0.19921875, 0.3984375}
+\definecolor{tigers_orange}{rgb}{0.9765625, 0.2734375, 0.0859375}
+\definecolor{cleveland_red}{rgb}{0.89453125, 0. , 0.1328125}
+\definecolor{diamondbacks_red}{rgb}{0.65234375, 0.09765625, 0.1875}
+\definecolor{bluejays_blue}{rgb}{0.07421875, 0.2890625, 0.5546875}
+\definecolor{cubs_blue}{rgb}{0.0546875, 0.19921875, 0.5234375}
+\definecolor{cubs_red}{rgb}{0.796875, 0.203125, 0.19921875}
+\definecolor{rangers_red}{rgb}{0.75, 0.06640625, 0.12109375}
+\definecolor{rangers_blue}{rgb}{0.0, 0.1953125, 0.46875}
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
@@ -88,7 +103,7 @@
 \usepackage{color,hyperref}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.3}
 \hypersetup{colorlinks,breaklinks,
-            linkcolor=darkblue,urlcolor=Mulberry,
+            linkcolor=darkblue,urlcolor=rangers_blue, %Mulberry,
             anchorcolor=darkblue,citecolor=darkblue}
             
 \newcommand{\linkicon}{\normalsize\hspace{3pt}\faExternalLink}
@@ -106,7 +121,7 @@
 \begin{document}
 
 % This is for switching between the full cv and two pager. The two pager is compiled when \twopagetrue. Don't forget to change the bib file above for a shorter list and clear the cached files so it will properly update!
-\fullcvfalse
+\fullcvfalse% \fullcvfalse 
 \onepagetrue
 \showreferencesfalse % \showreferencestrue
 
@@ -130,12 +145,12 @@
   %\mailaddress{404 Richards Building, 3700 Hamilton Walk 19104}
   \location{University of Pennsylvania}
   \phone{505.321.3366}
-  \homepage{jabrantley.github.io}
+%   \homepage{\href{https://twitter.com/JABrantl}{\textcolor{black}{https://github.com/jabrantley}}}%jabrantley.github.io}
   \email{justin.alexander.brantley@gmail.com}
-  \twitter{@JABrantl}
+  \twitter{\href{https://twitter.com/JABrantl}{@JABrantl}}
   %\linkedin{linkedin.com/in/justin-brantley}
 %   \researchgate{researchgate.net/profile/Justin\_Brantley}
-  \github{jabrantley}
+  \github{\href{https://github.com/jabrantley}{jabrantley}}%jabrantley.github.io}}
 %   \pubmed{https://www.ncbi.nlm.nih.gov/myncbi/1Dgfh5817PBQ1/bibliography/public/}
 %   \googlescholar{https://scholar.google.com/citations?hl=en&user=6Bj2LDoAAAAJ}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.

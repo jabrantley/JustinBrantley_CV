@@ -136,7 +136,7 @@
 \newcommand{\researchgatesymbol}{\aiResearchGateSquare} % JB EDIT
 \newcommand{\googlescholarsymbol}{\aiGoogleScholar} % JB EDIT
 \newcommand{\pubmedsymbol}{\aiPubmed} % JB EDIT
-
+\newcommand{\bioxriv}{\aibioRxivSquare}
 
 \newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
 
